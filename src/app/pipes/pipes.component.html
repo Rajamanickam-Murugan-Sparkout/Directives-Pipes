@@ -1,0 +1,70 @@
+<div class="container">
+    <div>
+        <h1 appCustomDirective>Pipes</h1>
+        <h4 appCustomDirective>Date Pipe: {{datePipe}}</h4>
+        <p>Date Format : {{datePipe | date}}</p>
+        <p>Date Short Format : {{datePipe | date: 'short'}}</p>
+        <p>Date Medium Format : {{datePipe | date: 'medium'}}</p>
+        <p>Date Long Format : {{datePipe | date: 'long'}}</p>
+        <p>Date Full Format : {{datePipe | date: 'full'}}</p>
+        <p>Date shortDate Format : {{datePipe | date: 'shortDate'}}</p>
+        <p>Date mediumDate Format : {{datePipe | date: 'mediumDate'}}</p>
+        <p>Date fullDate Format : {{datePipe | date: 'fullDate'}}</p>
+        <p>Date shortTime Format : {{datePipe | date: 'shortTime'}}</p>
+        <p>Date mediumTime Format : {{datePipe | date: 'mediumTime'}}</p>
+        <p>Date fullTime Format : {{datePipe | date: 'fullTime'}}</p>
+    </div>
+
+    <div>
+        <h4 appCustomDirective>Currency Pipe</h4>
+        <p>Default value: {{currencyPipe | currency}}</p>
+        <p>CAD value: {{currencyPipe | currency: 'CAD'}}</p>
+        <p>INR with symbol value: {{currencyPipe | currency: 'INR': 'symbol': '3.1-2'}}</p>
+        <p>INR with code value: {{currencyPipe | currency: 'INR': 'code'}}</p>
+    </div>
+
+    <div>
+        <h4 appCustomDirective>Number Pipe</h4>
+        <p>Number: {{num | number : '3.2-4'}}</p>
+    </div>
+
+    <div>
+        <h4 appCustomDirective>Percentage Pipe</h4>
+        <p>Percentage : {{perc | percent}}</p>
+    </div>
+
+    <div>
+        <h4 appCustomDirective>Uppercase Pipe</h4>
+        <p>Upper : {{userName | uppercase}}</p>
+    </div>
+
+    <div>
+        <h4 appCustomDirective>Lowercase Pipe</h4>
+        <p>Lower : {{userName | lowercase}}</p>
+    </div>
+
+    <div>
+        <h4 appCustomDirective>Titlecase Pipe</h4>
+        <p>Title : {{userName | titlecase}}</p>
+    </div>
+
+    <div>
+        <h4 appCustomDirective>Json Pipe</h4>
+        <p>Json : {{obj | json}}</p>
+    </div>
+
+    <div>
+        <h4 appCustomDirective>Slice Pipe</h4>
+        <p>Json : {{userName | uppercase | slice:0:12}}</p>
+    </div>
+
+    <div>
+        <h4 appCustomDirective>Keyvalue Pipe</h4>
+        <p>Json : {{obj | keyvalue}}</p>
+    </div>
+
+    <div>
+        <h4 appCustomDirective>Custom Pipe</h4>
+        <p>Custom : {{value | append}}</p>
+    </div>
+</div>

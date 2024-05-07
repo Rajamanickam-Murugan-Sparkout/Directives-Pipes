@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="mt-5">
+        <h2 appCustomDirective>*ngFor Directive</h2>
+        <ul>
+            <li *ngFor="let movie of movies; let i =index">
+                {{movie.movieName}} - {{movie.rating}}
+            </li>
+        </ul>
+    </div>
+
+    <table class="table mt-5">
+        <thead>
+            <th>S.No</th>
+            <th>Movie Name</th>
+            <th>Rating</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let movie of movies; let i= index; let e=even; let o=odd"
+            [ngClass]="{'text-success': e, 'text-danger': o}"
+            [ngStyle]="">
+                <td>{{i+1}}</td>
+                <td>{{movie.movieName}}</td>
+                <td>{{movie.rating}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3 appCustomDirective>*ngIf directive</h3>
+    <div>
+        Show <input type="checkbox" [(ngModel)]="showText">
+            <p *ngIf="showText; else elseBlock">Text is show when its true</p>
+        <ng-template #elseBlock>
+            <p>Text is show when its false</p>
+        </ng-template>
+    </div>
+
+    <h3 appCustomDirective>*ngSwitch directive</h3>
+    <div [ngSwitch]="occupation">
+        <p *ngSwitchCase="'teacher'">Occupation is Teacher</p>
+        <p *ngSwitchCase="'designer'">Occupation is Designer</p>
+        <p *ngSwitchCase="'lawyer'">Occupation is Lawyer</p>
+        <p *ngSwitchDefault>Occupation is Nothing</p>
+    </div>
+
+
+    <input type="text" class="form-control mt-5" [(ngModel)]="inputText">
+    <button class="btn btn-primary mt-3 " [disabled]="serverCreated" (click)="createdServer()">Create Text</button>
+    <p class="mt-2">{{serverStatus}}</p>
+</div>
+
+
+<app-pipes></app-pipes>
