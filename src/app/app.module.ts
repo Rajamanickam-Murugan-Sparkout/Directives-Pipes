@@ -7,6 +7,9 @@ import { FormsModule } from '@angular/forms';
 import { PipesComponent } from './pipes/pipes.component';
 import { AppendPipe } from './custom.pipe';
 import { CustomDirectiveComponent } from './custom.directive';
+import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
+import { ChildComponent } from './lifecycle-hooks/child/child.component';
+import { ParentComponent } from './lifecycle-hooks/parent/parent.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { CustomDirectiveComponent } from './custom.directive';
     DirectivesComponent,
     PipesComponent,
     AppendPipe,
-    CustomDirectiveComponent
+    CustomDirectiveComponent,
+    LifecycleHooksComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

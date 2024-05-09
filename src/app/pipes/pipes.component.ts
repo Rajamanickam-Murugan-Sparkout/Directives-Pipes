@@ -17,6 +17,6 @@ export class PipesComponent {
     age : 24
   }
   value = 5;
-
   
+
 }

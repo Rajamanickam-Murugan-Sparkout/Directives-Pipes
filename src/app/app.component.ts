@@ -6,6 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-directives';
+  angular = 'Angular';
+
+  show = false;
+
+  constructor(){
+
+  }
+
+  showFunction(){
+    this.show = !this.show
+    // this.title = 'Lifecycle-hooks'
+  }
 
 }

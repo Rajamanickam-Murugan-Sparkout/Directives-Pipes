@@ -1,1 +1,8 @@
-<app-directives></app-directives>
+<!-- <app-directives></app-directives>
+<app-pipes></app-pipes>  *ngIf="show" -->
+<app-lifecycle-hooks angular="{{angular}}"></app-lifecycle-hooks> 
+<div class="container pt-5">
+    <input type="text" class="form-control mb-2" [(ngModel)]="angular">
+    <button class="btn btn-primary mb-4" (click)="showFunction()">Toggle</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quasi cum distinctio mollitia necessitatibus, facilis eligendi voluptate quis voluptates at culpa aliquam ab pariatur harum tenetur omnis quo quia doloribus?</p>
+</div>
