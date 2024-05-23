@@ -4,12 +4,13 @@ import { AppComponent } from './app.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { PipesComponent } from './pipes/pipes.component';
 import { AppendPipe } from './custom.pipe';
 import { CustomDirectiveComponent } from './custom.directive';
 import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
 import { ChildComponent } from './lifecycle-hooks/child/child.component';
 import { ParentComponent } from './lifecycle-hooks/parent/parent.component';
+import { DataService } from './service/data.service';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,6 @@ import { ParentComponent } from './lifecycle-hooks/parent/parent.component';
     FormsModule
   ],
   bootstrap: [AppComponent],
-  providers: []
+  providers: [DataService]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from '../service/data.service';
 
 @Component({
   selector: 'app-pipes',
@@ -6,6 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./pipes.component.css']
 })
 export class PipesComponent {
+  datas: string[]= [];
+  constructor(private service: DataService){
+  this.datas = service.data
+  }
 
   datePipe = new Date();
   currencyPipe = 265.268;

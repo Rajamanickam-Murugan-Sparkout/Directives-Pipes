@@ -7,3 +7,7 @@
     <button class="btn btn-primary mb-4" (click)="showFunction()">Toggle</button>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quasi cum distinctio mollitia necessitatibus, facilis eligendi voluptate quis voluptates at culpa aliquam ab pariatur harum tenetur omnis quo quia doloribus?</p>
 </div>
+
+<div class="container" *ngFor="let mess of message">
+    <p>{{mess}}</p>
+</div>
